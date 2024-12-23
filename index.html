@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Three.js demo 3D graphics in JavaScript || (č) 8ogdanovv bit.ly/2PDFcv">
-    <title>Three.JS | (č) 8ogdanovv</title>
+    <meta name="description" content="Three.js demo 3D graphics in JavaScript || VADIM4WEB">
+    <title>Three.JS | VADIM4WEB</title>
   </head>
   <style>
     body {
@@ -188,8 +188,6 @@
       }
 
       window.onload = (event) => {
-        console.log('page is fully loaded');
-
         createAndAppendSquare(5);
 
         const header1 = document.createElement('h1');
@@ -214,7 +212,6 @@
               : new Date().getSeconds()
           }`;
           document.title = nowTime;
-          console.log(document.title);
           document.querySelector('#header2').innerText = nowTime;
           document.querySelector('#header1').innerText = `another second's gone - time to ${
             parseInt(String(document.title).slice(-1)) % 2 === 0 ? '(č)' : '|č|'.toLocaleUpperCase()
