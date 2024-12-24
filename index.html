@@ -203,13 +203,13 @@
 
         setInterval(() => {
           var nowTime = `${
-            String(new Date().getMinutes()).length === 1
-              ? '0' + new Date().getMinutes()
-              : new Date().getMinutes()
+            new Date().getUTCMinutes() < 10
+              ? '0' + new Date().getUTCMinutes()
+              : new Date().getUTCMinutes()
           }:${
-            String(new Date().getSeconds()).length === 1
-              ? '0' + new Date().getSeconds()
-              : new Date().getSeconds()
+            new Date().getUTCMinutes() < 1
+              ? '0' + new Date().getUTCMinutes()
+              : new Date().getUTCMinutes()
           }`;
           document.title = nowTime;
           document.querySelector('#header2').innerText = nowTime;
@@ -221,7 +221,7 @@
         document.title = 'page';
         const link = document.createElement('link');
         link.rel = 'shortcut icon';
-        link.href = 'https://vadym4che.github.io/cv/favicon.png';
+        link.href = 'https://vadim4web.github.io/cv/favicon.ico';
         link.type = 'image/x-icon';
         document.head.appendChild(link);
         document.body.style.cursor = 'pointer';
